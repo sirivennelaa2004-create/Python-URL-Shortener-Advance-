@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shortened URL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Your Shortened URL</h2>
+
+        <input type="text" id="shortUrl" value="{{ short_url }}" readonly>
+        <button onclick="copyURL()">Copy</button>
+
+        <p id="message"></p>
+
+        <a href="/">Shorten another URL</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
